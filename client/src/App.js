@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 import './App.css';
+import { post } from '../../routes/api';
 
 class App extends React.Component {
 
@@ -40,7 +41,8 @@ class App extends React.Component {
 
     const payload = {
       title: this.state.title,
-      body: this.state.body
+      body: this.state.body,
+      post: this.state.post
     };
 
 
