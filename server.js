@@ -5,12 +5,12 @@ const morgan = require('morgan');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8080; // Step 1
+const PORT = process.env.PORT || 3000; // Step 1
 
 const routes = require('./routes/api');
 
 // Step 2
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_youtube', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Kable:Kable2020@cluster0.fmk3d.mongodb.net/Cluster0?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
