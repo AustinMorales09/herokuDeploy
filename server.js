@@ -3,21 +3,21 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
-var http = require('http')
-var fs = require('fs')
+// var http = require('http')
+// var fs = require('fs')
 
-function onRequest(req,res){
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    fs.readFile('/', null, function(error,data){
-    if(err) {
-        res.writeHead(404);
-        res.write('File not found');
-    } else {
-        response.write(data);
-    }
-    res.end()
-});
-}
+// function onRequest(req,res){
+//     res.writeHead(200, {'Content-Type': 'text/html'});
+//     fs.readFile('/', null, function(err,data){
+//     if(err) {
+//         res.writeHead(404);
+//         res.write('File not found');
+//     } else {
+//         response.write(data);
+//     }
+//     res.end()
+// });
+// }
 // http.createServer(onRequest).listen(3000)
 
 
@@ -30,7 +30,7 @@ const { response } = require('express');
 
 
 app.get('/', function (req, res) {
-    res.render('index.html', {});
+    res.render('index');
   });
 // Step 2
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Kable:Kable2020@cluster0.fmk3d.mongodb.net/Cluster0?retryWrites=true&w=majority', {
